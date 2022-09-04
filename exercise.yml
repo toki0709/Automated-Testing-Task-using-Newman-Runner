@@ -3,8 +3,8 @@ stages:
   - stage: Build
     jobs:
       - job: Build
-        runs-on: ubuntu-latest
-
+        pool:
+          vmImage: "ubuntu-latest"
         steps:
           - task: CmdLine@2
             displayName: Install Newman
